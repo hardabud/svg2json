@@ -1,0 +1,23 @@
+html
+	head
+		meta(charset="UTF-8")
+		script(src="/js/d3.js")
+	body
+		svg
+		script.
+			var svg = d3.select('svg')
+				.attr({
+					width: window.innerWidth,
+					height: window.innerHeight
+				})
+			var data =!{JSON.stringify(file)};
+			svg.selectAll('path')
+				.data(data)
+				.enter()
+				.append('path')
+				.attr({
+					id: function(d) { return d.id; },
+					d: function(d) { return d.d; },
+					style: function(d) { return d.style; },
+					transform: function(d) { return d.transform; },
+				})

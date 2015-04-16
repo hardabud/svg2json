@@ -1,0 +1,9 @@
+html
+	head
+		meta(charset="UTF-8")
+	body
+		h2 Existing files
+		ul
+		each file in jsonFiles
+			a(href="/#{file}")
+				li #{file}

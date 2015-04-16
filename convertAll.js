@@ -1,7 +1,7 @@
 var fs = require('fs');
 var async = require('async');
 
-var convert = require('./convert');
+var convert = require('./converter');
 var svgs = fs.readdirSync('./svg');
 
 var converting = function(svg, doneCallback) {
@@ -11,5 +11,6 @@ var converting = function(svg, doneCallback) {
 };
 
 async.eachSeries(svgs, converting, function (err) {
-  if(err) { console.log(err); }
+	if(err) { console.log(err); }
+	else return 'ok'	
 });
