@@ -1,4 +1,4 @@
-# Convert SVG files to json***
+# Convert SVG files to json
 
 For when you have created an SVG with Inkscape and need to use it with d3.js
 
@@ -15,5 +15,5 @@ For when you have created an SVG with Inkscape and need to use it with d3.js
 
 **To view files with d3.js**
 
-- Run > node server
+- Run `node server`
 - Visit `localhost:3000`
